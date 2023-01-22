@@ -135,3 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # typically, os.path.join(os.path.dirname(__file__), 'media')
 MEDIA_ROOT = '<your_path>/media'
 MEDIA_URL = '/media/'
+
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
