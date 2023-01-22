@@ -1,0 +1,12 @@
+{% load static %}
+<header style="background-color:lightgray">
+    <a href="{% url 'home' %}">
+        <img src="{% static 'app_genenral/logo.png' %}">
+        <span>ISO Consult</span>
+    </a>
+    <a href="{% url 'eiearning' %}">ELEARNING</a>
+    <a href="{% url 'news' %}">NEWS & EVENTS</a>
+    <a href="{% url 'training' %}">TRAINING</a>
+    <a href="{% url 'blog' %}">BLOG</a>
+    <a href="{% url 'contact' %}">CONTACT</a>
+</header>
