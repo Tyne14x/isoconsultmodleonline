@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app_general',
     'app_student',
+    'embed_video',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +65,9 @@ ROOT_URLCONF = 'isoconsult.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR.joinpath('templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,11 +1,11 @@
 {% load static %}
-<header style="background-color:lightgray">
-    <a href="{% url 'home' %}">
+<header class="site-header" style="background-color:lightgray">
+    <a class="site-header-item site-header-brand" href="{% url 'home' %}">
         <img src="{% static 'app_general/logo.png' %}">
     </a>
-    <a href="{% url 'eiearning' %}">ELEARNING</a>
-    <a href="{% url 'news' %}">NEWS & EVENTS</a>
-    <a href="{% url 'training' %}">TRAINING</a>
-    <a href="{% url 'blog' %}">BLOG</a>
-    <a href="{% url 'contact' %}">CONTACT</a>
+    <a class="site-header-item" href="{% url 'eiearning' %}">ELEARNING</a>
+    <a class="site-header-item" href="{% url 'news' %}">NEWS & EVENTS</a>
+    <a class="site-header-item" href="{% url 'training' %}">TRAINING</a>
+    <a class="site-header-item" href="{% url 'blog' %}">BLOG</a>
+    <a class="site-header-item" href="{% url 'contact' %}">CONTACT</a>
 </header>

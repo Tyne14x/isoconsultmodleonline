@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'app_general/components/base.html' %}
+
+{% block site_title %}ISO Consult | CONTACT{% endblock %}
+
+{% block content %}
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +12,6 @@
 </head>
 
 <body>
-    {% include 'app_general/components/site_header.html' %}
     <div>
         <h2>ISO/IEC 17025, VERSION 2017
             GENERAL REQUIREMENTS FOR THE COMPETENCE OF TESTING AND CALIBRATION LABORATORIES</h2>
@@ -18,7 +20,6 @@
             โดยมาตรฐานนี้สามารถที่จะนำมาใช้ได้กับทุกองค์กรที่มี การดำเนินกิจกรรมการทดสอบและ/หรือ สอบเทียบ
             ทำให้มั่นใจได้ว่าห้องปฏิบัติการมีการดำเนินการอย่างเป็นมาตรฐานที่สากลยอมรับ.....</p>
     </div>
-    {% include 'app_general/components/site_footer.html' %}
 </body>
 
-</html>
+{% endblock %}

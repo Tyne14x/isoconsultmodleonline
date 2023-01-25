@@ -22,6 +22,88 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-html {
-    font-family: 'Mitr', sans-serif;
+/* global */
+*,
+::before,::after {
+    box-sizing: border-box;
 }
+
+body {
+    color: #333333;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+}
+
+h2,h3,h4,h5,h6 {
+    color: #111111;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: hsl(221, 100%, 50%);
+}
+
+/* site header */
+
+.site-header {
+    background-color: wheat;
+    border-bottom: 1px solid rgb(216, 215, 215);
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    height: 50px;
+
+}
+
+.site-header-item {
+    color: #111111;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    transition: background-color 300ms;
+}
+
+.site-header-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.site-header-brand img {
+    display: inline--block;
+    height: 32px;
+    margin-right: 8px;
+}
+
+/* site footer */ 

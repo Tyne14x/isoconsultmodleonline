@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render ,redirect
 from django.http.response import HttpResponse
 from django.core.mail import send_mail
 from app_general.models import Contact
 from django.conf import settings
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -124,3 +125,23 @@ def course(request):
 
 def introduction_video(request):
     return render(request, 'app_general/introduction_video.html')
+
+def Register(request):
+    if request.method == 'POST':
+        data = request.POST.copy()
+        first_name = data.get('first_name')
+        last_name = data.get('last_name')
+        email = data.get('email')
+        password = data.get('password')
+
+        newuser = User()
+        newuser.username = email
+        newuser.first_name = first_name
+        newuser.last_name = last_name
+        newuser.email = email
+        newuser.set_password(password)
+        newuser.save()
+        return redirect('login')
+
+    return render(request, 'app_general/register.html')
+

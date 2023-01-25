@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'app_general/components/base.html' %}
 
+{% block site_title %}ISO Consult | CONTACT{% endblock %}
+
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +11,6 @@
 </head>
 
 <body>
-    {% include 'app_general/components/site_header.html' %}
     <!-- Header -->
 <h1 style="background-color:rgb(245, 37, 0);">Request For Quote</h1>
 <div class="alert alert-secondary" role="alert">
@@ -164,7 +165,7 @@
             
         </form>
     </div>
-    {% include 'app_general/components/site_footer.html' %}
+    
 </body>
 
-</html>
+{% endblock %}

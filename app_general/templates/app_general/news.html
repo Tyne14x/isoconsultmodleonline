@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'app_general/components/base.html' %}
+
+{% block site_title %}ISO Consult | CONTACT{% endblock %}
+
+{% block content %}
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +12,6 @@
 </head>
 
 <body>
-    {% include 'app_general/components/site_header.html' %}
     <div>
         <h2>
             เชื้อไวรัสโคโรน่า (COVS) พบได้ทั่วโลก
@@ -22,7 +24,6 @@
             (อาจมีระยะฟักตัวนานถึง 3 – 4 วัน) สำหรับโรคซาร์สอาจ ใช้ระยะฟักตัว 4 – 7 วัน (อาจนานถึง 10 – 14 วัน)
         </p>
     </div>
-    {% include 'app_general/components/site_footer.html' %}
 </body>
 
-</html>
+{% endblock %}
