@@ -1,9 +1,9 @@
 from django.shortcuts import render ,redirect
-from django.http.response import HttpResponse
 from django.core.mail import send_mail
 from app_general.models import Contact
 from django.conf import settings
 from django.contrib.auth.models import User
+from .models import Video
 
 # Create your views here.
 
@@ -124,7 +124,8 @@ def course(request):
 
 
 def introduction_video(request):
-    return render(request, 'app_general/introduction_video.html')
+    videos = Video.objects.all()
+    return render(request, 'app_general/introduction_video.html', context={'videos': videos})
 
 def Register(request):
     if request.method == 'POST':
