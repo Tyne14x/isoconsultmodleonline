@@ -4,24 +4,16 @@
 
 {% block content %}
 
-
-<div>
-  <center>
-    <h1 class="mb-5">Video</h1>
-  </center>
-</div>
-
+<h1 class="mb-5"> Video </h1>
 <div class="d-flex flex-wrap">
   {% for item in videos %}
 </div>
-
 <div class="px-3 mb-5">
   {% video item.url '426x240' %}
   <div class="d-flex justify-content-start">
     {{ item.title }}
   </div>
 </div>
-
 
 {% endfor %}
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'app_general/components/base.html' %}
 {% load static %}
-
+{% load embed_video_tags %}
 
 {% block content %}
 <div class="container">
@@ -13,31 +13,34 @@
 <section>
     <div class="container">
         <center>
-            <h4>In-house & On-line Learning!
+            <p><b>In-house & On-line Learning!
                 ISO CONSULTING & TRAINING
                 ISO9001, ISO14001, AS9100/10/20, IATF16949, ISO45001, ISO13485, ISO15189, ISO17025, ISO22301, ISO27001,
                 ISO22000, TL9000, Lean, Six Sigma,..etc.
-            </h4>
+            </b>
+            </p>
         </center>
 
     </div>
-<div class="container">
-    <center>
-        <div>
-            <img src="{% static 'app_general/iso.jpg' %}">
-        </div>
-        <p>kkk</p>
-        <div>
-            <img src="{% static 'app_general/iso2.jpg' %}">
-        </div>
-        <p>kkk</p>
-        <div>
-            <img src="{% static 'app_general/iso3.jpg' %}">
-        </div>
-        <p>kkk</p>
-    </center>
-    
-</div>
-    
+    <div class="container">
+        <center>
+            <div>
+                <img src="{% static 'app_general/iso.jpg' %}">
+            </div>
+            <p>kkk</p>
+            <div>
+                <img src="{% static 'app_general/iso2.jpg' %}">
+            </div>
+            <p>kkk</p>
+            <div>
+                <img src="{% static 'app_general/iso3.jpg' %}">
+            </div>
+            <p>kkk</p>
+        </center>
+
+    </div>
+
+
 </section>
+
 {% endblock %}
