@@ -1,20 +1,15 @@
 {% load static %}
-<header class="site-header">
-    <a class="site-header-item site-header-brand" href="{% url 'home' %}">
-        <img src="{% static 'app_general/logo.png' %}">
-    </a>
-    <a class="site-header-item" href="{% url 'eiearning' %}">ELEARNING</a>
-    <a class="site-header-item" href="{% url 'news' %}">NEWS & EVENTS</a>
-    <a class="site-header-item" href="{% url 'training' %}">TRAINING</a>
-    <a class="site-header-item" href="{% url 'blog' %}">BLOG</a>
-    <a class="site-header-item" href="{% url 'contact' %}">CONTACT</a>
-    
-        {% if user.is_authenticated %}
-          <font color="red">สวัสดี & nbsp {{user.first_name}}&nbsp&nbsp{{user.last_name}}</font>
-          <a class="site-header-item" href="{% url 'logout' %}">LogOut</a>
-        {%else %}
-        <a class="site-header-item" href="{% url 'login' %}">Login</a>
-        <a class="site-header-item" href="{% url 'register' %}">Register</a>
-        {% endif %}
-    
+<header class="site-header">    
+        <div class="site-header">
+            <a class="site-header-item site-header-brand" href="{% url 'home' %}">
+                <img src="{% static 'app_general/logo.png' %}">
+            </a>
+            <a class="site-header-item" href="{% url 'eiearning' %}">ELEARNING</a>
+            <a class="site-header-item" href="{% url 'news' %}">NEWS & EVENTS</a>
+            <a class="site-header-item" href="{% url 'training' %}">TRAINING</a>
+            <a class="site-header-item" href="{% url 'blog' %}">BLOG</a>
+            <a class="site-header-item" href="{% url 'contact' %}">CONTACT</a> 
+            <a class="site-header-item" href="{% url 'login' %}">Login</a>
+            <a class="site-header-item" href="{% url 'register' %}">Register</a>
+        </div>
 </header>

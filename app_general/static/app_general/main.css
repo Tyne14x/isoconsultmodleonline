@@ -14,7 +14,7 @@
 @font-face {
     font-family: 'Mitr';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     src: local(''),
         url('fonts/mitr-v11-thai_latin-regular.woff2') format('woff2'),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -102,7 +102,7 @@ a {
 }
 
 .site-header-item:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .site-header-brand img {

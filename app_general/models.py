@@ -13,7 +13,7 @@ class Contact(models.Model):
         return self.cusemail
     
 class Video(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=140)
     added = models.DateTimeField(auto_now_add=True)
     url= EmbedVideoField(max_length=140, blank=True, null=True)
 
