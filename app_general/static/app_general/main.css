@@ -115,6 +115,14 @@
     margin-bottom: 16px;
   }
   
+@media screen and (min-width: 720px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 /* site header */
 
