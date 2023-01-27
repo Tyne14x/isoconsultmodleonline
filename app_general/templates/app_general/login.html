@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container">
-  <h2>Login</h2>
+  <h2 class="content-title text-center">Login</h2>
   <form method="POST">
     {% csrf_token %}
 
@@ -17,7 +17,13 @@
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
     </div>
-    <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
+    <br>
+    <div>
+      <center>
+        <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
+      </center>
+    </div>
+    <br>
   </form>
 </div>
 {% endblock %}
