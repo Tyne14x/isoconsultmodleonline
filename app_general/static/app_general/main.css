@@ -4,79 +4,117 @@
     font-style: normal;
     font-weight: 300;
     src: local(''),
-        url('fonts/mitr-v11-thai_latin-300.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/mitr-v11-thai_latin-300.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* mitr-regular - thai_latin */
-@font-face {
+      url('fonts/mitr-v9-thai_latin-300.woff2') format('woff2'),
+      url('fonts/mitr-v9-thai_latin-300.woff') format('woff');
+  }
+  
+  @font-face {
     font-family: 'Mitr';
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     src: local(''),
-        url('fonts/mitr-v11-thai_latin-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/mitr-v11-thai_latin-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* global */
-*,
-::before,
-::after {
+      url('fonts/mitr-v9-thai_latin-regular.woff2') format('woff2'),
+      url('fonts/mitr-v9-thai_latin-regular.woff') format('woff');
+  }
+  
+  /* Global */
+  *, ::before, ::after {
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     color: #333333;
     font-family: 'Mitr', sans-serif;
     font-weight: 300;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
     color: #111111;
     font-weight: 400;
     line-height: 1.4;
-}
-
-h1 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+  }
+  
+  h1 {
     font-size: 32px;
-}
-
-h2 {
+  }
+  
+  h2 {
     font-size: 28px;
-}
-
-h3 {
+  }
+  
+  h3 {
     font-size: 24px;
-}
-
-h4 {
+  }
+  
+  h4 {
     font-size: 22px;
-}
-
-h5 {
+  }
+  
+  h5 {
     font-size: 20px;
-}
-
-h6 {
+  }
+  
+  h6 {
     font-size: 18px;
-}
-
-p {
+  }
+  
+  p {
     font-size: 16px;
     line-height: 1.6;
-}
+    margin-top: 0px;
+    margin-bottom: 16px;
+  }
+  
+  a {
+    color: #0D79F2;
+  }
 
-a {
-    color: hsl(221, 100%, 50%);
-}
+  .text-gray {
+    color: #888888;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .image-block {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .content-section {
+    padding: 64px 16px;
+  }
+  
+  .content-section-single {
+    min-height: calc(100vh - 150px);
+  }
+  
+  .content-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .content-container-narrow {
+    max-width: 600px;
+  }
+  
+  .content-title {
+    margin-bottom: 24px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    margin-bottom: 16px;
+  }
+  
 
 /* site header */
 
@@ -92,7 +130,7 @@ a {
 
 .site-header-item {
     color: #111111;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.1);
     font-weight: 400;
     text-decoration: none;
     display: flex;
@@ -112,3 +150,70 @@ a {
 }
 
 /* site footer */
+.site-footer {
+    background-color: rgb(232, 232, 232);
+    text-align: center;
+    padding: 16px;
+}
+
+.site-footer-copyright {
+    font-size: 12px;
+}
+
+/* Home landing  section */
+.home-landing {
+    background-color: #eeeeee;
+    background-image: url('iso2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 108px 16px;
+  }
+  
+  .home-landing-text {
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 1);
+    margin-top: 0px;
+    margin-bottom: 24px;
+  }
+
+  .image-block {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  @media screen and (min-width: 720px) {
+    .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .grid-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  /* Homepage */
+.home-landing {
+  background-color: #eeeeee;
+  background-image: url('iso2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 108px 16px;
+}
+
+.home-landing-text {
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 1);
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
