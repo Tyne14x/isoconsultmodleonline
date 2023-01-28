@@ -90,7 +90,7 @@
   }
   
   .content-section-single {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 100px);
   }
   
   .content-container {
@@ -224,3 +224,5 @@
   margin-top: 0px;
   margin-bottom: 24px;
 }
+
+
