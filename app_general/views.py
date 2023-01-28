@@ -145,6 +145,3 @@ def Register(request):
         return redirect('login')
 
     return render(request, 'app_general/register.html')
-
-def login(request):
-    return render(request, 'app_general/login.html')
