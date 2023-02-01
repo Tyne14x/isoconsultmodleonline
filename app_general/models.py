@@ -22,3 +22,13 @@ class Video(models.Model):
     
     class Meta:
         ordering = ['-added']
+
+class Course(models.Model):
+    course_code = models.CharField(max_length=10)
+    course_name = models.CharField(max_length=255)
+    course_days = models.CharField(max_length=10)
+    course_fee = models.CharField(max_length=50)
+    course_date = models.DateField(blank=True, null=True)
+
+    def __str__(self):
+        return self.course_name

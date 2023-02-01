@@ -1,6 +1,6 @@
 from django.shortcuts import render ,redirect
 from django.core.mail import send_mail
-from app_general.models import Contact
+from app_general.models import Contact , Course
 from django.conf import settings
 from django.contrib.auth.models import User
 from .models import Video
@@ -146,3 +146,43 @@ def Register(request):
         return redirect('login')
 
     return render(request, 'app_general/register.html')
+
+def AddCourse(request):
+    if request.method == 'POST':
+        course_code = request.POST["course_code"]
+        course_name = request.POST["course_name"]
+        course_days = request.POST["course_days"]
+        course_fee = request.POST["course_fee"]
+        course_date = request.POST["course_date"]
+
+        course = Course.objects.create(
+            course_code = course_code,
+            course_name = course_name,
+            course_days = course_days,
+            course_fee = course_fee,
+            course_date = course_date 
+        )
+        course.save()
+        return redirect("training")
+    else:
+        return render(request,"addcourse.html")
+
+def EditForm(request,course_id):
+    course = Course.objects.get(id = course_id)
+    if request.method == "POST":
+        course.course_code = request.POST["course_code"]
+        course.course_name = request.POST["course_name"]
+        course.course_days = request.POST["course_days"]
+        course.course_fee = request.POST["course_fee"]
+        course.course_date = request.POST["course_date"]
+        course.save()
+        return redirect("training")
+
+    else:
+        course = Course.objects.get(id = course_id)
+        return render(request,"editform.html",{"course":course})
+
+def DeleteForm(request,course_id):
+    course = Course.objects.get(id = course_id)
+    course.delete()
+    return redirect("training")

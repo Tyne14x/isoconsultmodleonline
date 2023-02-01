@@ -3,7 +3,37 @@
 {% block site_title %}ISO Consult | COURSE{% endblock %}
 
 {% block content %}
-<div>
-
+<div class="container">
+    <h2 class="text-center">Training</h2>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Course</th>
+          <th scope="col">Days</th>
+          <th scope="col">FEE(THB)</th>
+          <th scope="col">Date</th>
+          <th scope="col">สมัคร</th>
+          <th scope="col">แก้ไข</th>
+          <th scope="col">ลบ</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for course in courses %}
+        <tr>
+          <th scope="row">{{course.course_code}}</th>
+          <td>{{course.course_name}}</td>
+          <td>{{course.course_days}}</td>
+          <td>{{course.course_fee}}</td>
+          <td>{{course.course_date}}</td>
+          <td><a href="form" class="btn btn-success">สมัคร</a></td>
+          <td><a href="edit/{{course.id}}" class="btn btn-warning">แก้ไข</a></td>
+          <td><a href="delete/{{course.id}}" class="btn btn-danger"
+              onclick="return confirm('คุณต้องการลบ {{course_name}} หรือไม่')">ลบ</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="addcourse"><button class="btn btn-primary">Add Course</button></a>
 </div>
 {% endblock %}
