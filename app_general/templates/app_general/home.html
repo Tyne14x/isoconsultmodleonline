@@ -37,20 +37,21 @@
       </div>
     </div>
   </div>
-  <div>
-    
+  <div class="container text-center">
       <h1 class="mb-5"> Video </h1>
-      <div class="d-flex flex-wrap">
+      <div class="row d-flex flex-wrap text-center">
         {% for item in videos %}
       </div>
-      <div class="px-3 mb-5">
+      <div class="px-3 mb-5 text-center">
         {% video item.url '426x240' %}
-        <div class="d-flex justify-content-start">
+        <div class="text-center">
           {{ item.title }}
         </div>
       </div>
-   
   </div>
+
+
+
 </section>
 
 
