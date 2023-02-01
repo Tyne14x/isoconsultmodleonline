@@ -9,7 +9,8 @@ from .models import Video
 
 
 def home(request):
-    return render(request, 'app_general/home.html')
+    videos = Video.objects.all()
+    return render(request, 'app_general/home.html', context={'videos': videos})
 
 
 def contact(request):

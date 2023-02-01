@@ -1,15 +1,16 @@
 {% load static %}
-<header class="site-header">    
-        <div class="site-header">
-            <a class="site-header-item site-header-brand" href="{% url 'home' %}">
-                <img src="{% static 'app_general/logo1.png' %}">
-            </a>
-            <a class="site-header-item" href="{% url 'eiearning' %}">ELEARNING</a>
-            <a class="site-header-item" href="{% url 'news' %}">NEWS & EVENTS</a>
-            <a class="site-header-item" href="{% url 'training' %}">TRAINING</a>
-            <a class="site-header-item" href="{% url 'blog' %}">BLOG</a>
-            <a class="site-header-item" href="{% url 'contact' %}">CONTACT</a> 
-            <a class="site-header-item" href="{% url 'login' %}">Login</a>
-            <a class="site-header-item" href="{% url 'register' %}">Register</a>
-        </div>
+<header class="site-header">
+    <div class="site-header">
+        <a class="site-header-item site-header-brand" href="{% url 'home' %}">
+            <img src="{% static 'app_general/logo1.png' %}">
+        </a>
+        <a class="site-header-item" href="{% url 'eiearning' %}">ELEARNING</a>
+        <a class="site-header-item" href="{% url 'news' %}">NEWS & EVENTS</a>
+        <a class="site-header-item" href="{% url 'training' %}">TRAINING</a>
+        <a class="site-header-item" href="{% url 'blog' %}">BLOG</a>
+        <a class="site-header-item" href="{% url 'contact' %}">CONTACT</a>
+        <a class="site-header-item" href="{% url 'login' %}">Login</a>
+        <a class="site-header-item" href="{% url 'register' %}">Register</a>
+        <a class="site-header-item" href="{% url 'logout' %}">LogOut</a>
+    </div>
 </header>

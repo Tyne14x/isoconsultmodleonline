@@ -1,7 +1,9 @@
 {% extends 'app_general/components/base.html' %}
 {% load static %}
+{% load embed_video_tags %}
 
 {% block content %}
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,18 +24,37 @@
     <div class="grid grid-3">
       <div>
         <img class="image-block" src="{% static 'app_general/iso.jpg' %}">
-        <p>จันทร์ไรเดอร์ คือ บริการจัดส่งไอศครีมอร่อยถึงมือคุณ เดือนละครั้ง ในวันจันทร์ที่คุณสะดวกรับ</p>
+        <p>ISO 22301 Topic: Security and resilience — Business continuity management systems — Requirements</p>
       </div>
       <div>
         <img class="image-block" src="{% static 'app_general/iso2.jpg' %}">
-        <p>จันทร์ไรแมน คือ พนักงานส่งไอศครีม ขี่ไวแบบไม่ย้อนศร และฉีดวัคซีนครบ 2 เข็มแล้วทุกคน</p>
+        <p>ISO 45001 Topic: Occupational health and safety management systems — Requirements with guidance for use.</p>
       </div>
       <div>
         <img class="image-block" src="{% static 'app_general/iso3.jpg' %}">
-        <p>ไอศครีมทุกรสรังสรรค์ขึ้นมาอย่างพิถีพิถัน ไม่หวั่นแม้ออเดอร์มามาก</p>
+        <p>AS/EN/JISQ9100 Topic: Quality Systems – Aerospace – Model for Quality Assurance in Design, Development,
+          Production, Installation and Servicing</p>
       </div>
     </div>
   </div>
+  <div>
+    
+      <h1 class="mb-5"> Video </h1>
+      <div class="d-flex flex-wrap">
+        {% for item in videos %}
+      </div>
+      <div class="px-3 mb-5">
+        {% video item.url '426x240' %}
+        <div class="d-flex justify-content-start">
+          {{ item.title }}
+        </div>
+      </div>
+   
+  </div>
 </section>
 
+
+
+
+{% endfor %}
 {% endblock %}
