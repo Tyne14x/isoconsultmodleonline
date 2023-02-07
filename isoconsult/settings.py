@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'app_general',
     'app_student',
     'embed_video',
+    'app_users',
 ]
 
 MIDDLEWARE = [
@@ -140,5 +141,5 @@ MEDIA_ROOT = '<your_path>/media'
 MEDIA_URL = '/media/'
 
 LOGIN_URL = 'login'
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'

@@ -9,9 +9,22 @@
         <a class="site-header-item" href="{% url 'training' %}">TRAINING</a>
         <a class="site-header-item" href="{% url 'blog' %}">BLOG</a>
         <a class="site-header-item" href="{% url 'contact' %}">CONTACT</a>
+
+        {% if user.is_authenticated %}
+
+        <a class="site-header-item" href="#">
+            <span>{{ user.usernaame }}</span>
+        </a>
+        <a class="site-header-item " href="{% url 'logout' %}">
+            <samp>ออกจากระบบ</samp>
+        </a>
+        
+        {% else %}
+        
         <a class="site-header-item " href="{% url 'login' %}">LOGIN</a>
         <a class="site-header-item " href="{% url 'register' %}">REGISTER</a>
-        <a class="site-header-item " href="{% url 'logout' %}">LOGOUT</a>
+
+        {% endif %}
     </div>
 
 </header>

@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from app_general import views
 from django.conf import settings
 

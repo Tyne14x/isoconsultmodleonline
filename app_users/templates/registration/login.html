@@ -1,0 +1,34 @@
+{% extends 'app_general/components/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Consult | LOGIN </title>
+</head>
+<section class="home-landing">
+  <h2 class="content-title text-center">Login</h2>
+    <form action="{% url 'login' %}" method="post">
+      {% csrf_token %}  
+      <div class="form-group">
+        <label for="username">Email address:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter email" name="username">
+      </div>
+  
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+      </div>
+      <br>
+      <div>
+        <center>
+          <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
+        </center>
+      </div>
+    </form>
+    
+
+  </section>
+
+{% endblock %}
